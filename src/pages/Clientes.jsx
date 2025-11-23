@@ -23,7 +23,7 @@ const Clientes = () => {
 
   const loadItems = async () => {
     try {
-      const response = await api.get('/clientes');
+      const response = await api.get('/customers');
       setItems(response.data);
     } catch (error) {
       console.error('Erro ao carregar clientes:', error);
@@ -34,7 +34,7 @@ const Clientes = () => {
 
   const handleEdit = async (id) => {
     try {
-      const response = await api.get(`/clientes/${id}`);
+      const response = await api.get(`/customers/${id}`);
       setSelectedItem(response.data);
       setFormData(response.data);
       setIsModalOpen(true);
@@ -46,7 +46,7 @@ const Clientes = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Deseja realmente excluir este cliente?')) {
       try {
-        await api.delete(`/clientes/${id}`);
+        await api.delete(`/customers/${id}`);
         loadItems();
       } catch (error) {
         console.error('Erro ao excluir cliente:', error);
@@ -58,9 +58,9 @@ const Clientes = () => {
     e.preventDefault();
     try {
       if (selectedItem?.id) {
-        await api.put(`/clientes/${selectedItem.id}`, formData);
+        await api.put(`/customers/${selectedItem.id}`, formData);
       } else {
-        await api.post('/clientes', formData);
+        await api.post('/customers', formData);
       }
       setIsModalOpen(false);
       loadItems();
