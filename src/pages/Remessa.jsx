@@ -23,7 +23,7 @@ const Remessa = () => {
 
   const loadItems = async () => {
     try {
-      const response = await api.get('/shipments');
+      const response = await api.get('/remessas');
       setItems(response.data);
     } catch (error) {
       console.error('Erro ao carregar remessas:', error);
@@ -34,7 +34,7 @@ const Remessa = () => {
 
   const handleEdit = async (id) => {
     try {
-      const response = await api.get(`/shipments/${id}`);
+      const response = await api.get(`/remessas/${id}`);
       setSelectedItem(response.data);
       setFormData(response.data);
       setIsModalOpen(true);
@@ -46,7 +46,7 @@ const Remessa = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Deseja realmente excluir esta remessa?')) {
       try {
-        await api.delete(`/shipments/${id}`);
+        await api.delete(`/remessas/${id}`);
         loadItems();
       } catch (error) {
         console.error('Erro ao excluir remessa:', error);
@@ -58,9 +58,9 @@ const Remessa = () => {
     e.preventDefault();
     try {
       if (selectedItem?.id) {
-        await api.put(`/shipments/${selectedItem.id}`, formData);
+        await api.put(`/remessas/${selectedItem.id}`, formData);
       } else {
-        await api.post('/shipments', formData);
+        await api.post('/remessas', formData);
       }
       setIsModalOpen(false);
       loadItems();

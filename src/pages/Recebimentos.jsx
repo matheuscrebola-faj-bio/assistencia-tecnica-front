@@ -22,7 +22,7 @@ const Recebimentos = () => {
 
   const loadItems = async () => {
     try {
-      const response = await api.get('/invoices');
+      const response = await api.get('/recebimentos');
       setItems(response.data);
     } catch (error) {
       console.error('Erro ao carregar recebimentos:', error);
@@ -33,7 +33,7 @@ const Recebimentos = () => {
 
   const handleEdit = async (id) => {
     try {
-      const response = await api.get(`/invoices/${id}`);
+      const response = await api.get(`/recebimentos/${id}`);
       setSelectedItem(response.data);
       setFormData(response.data);
       setIsModalOpen(true);
@@ -45,7 +45,7 @@ const Recebimentos = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Deseja realmente excluir este recebimento?')) {
       try {
-        await api.delete(`/invoices/${id}`);
+        await api.delete(`/recebimentos/${id}`);
         loadItems();
       } catch (error) {
         console.error('Erro ao excluir recebimento:', error);
@@ -57,9 +57,9 @@ const Recebimentos = () => {
     e.preventDefault();
     try {
       if (selectedItem?.id) {
-        await api.put(`/invoices/${selectedItem.id}`, formData);
+        await api.put(`/recebimentos/${selectedItem.id}`, formData);
       } else {
-        await api.post('/invoices', formData);
+        await api.post('/recebimentos', formData);
       }
       setIsModalOpen(false);
       loadItems();

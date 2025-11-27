@@ -1,0 +1,27 @@
+.btn-solucao {
+  background-color: #10b981;
+  color: white;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.btn-solucao:hover {
+  background-color: #059669;
+}
+
+.solucao-info {
+  background-color: var(--bg-red);
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--primary-red);
+}
+
+.solucao-info p {
+  margin: 5px 0;
+  color: var(--dark-red);
+}
+
+.solucao-info strong {
+  color: #333;
+}

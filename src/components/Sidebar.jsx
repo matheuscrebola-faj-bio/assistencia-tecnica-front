@@ -10,6 +10,7 @@ const Sidebar = () => {
     { path: '/dashboard', label: 'Home', icon: '🏠' },
     { path: '/clientes', label: 'Clientes', icon: '👥' },
     { path: '/equipamentos', label: 'Equipamentos', icon: '🔧' },
+    { path: '/atendimentos', label: 'Atendimentos', icon: '📋' },
     { path: '/recebimentos', label: 'Recebimentos', icon: '📦' },
     { path: '/faturas', label: 'Faturas', icon: '💰' },
     { path: '/testes', label: 'Testes', icon: '🧪' },

@@ -32,7 +32,7 @@ const PublicForm = () => {
     setMessage({ type: '', text: '' });
 
     try {
-      await axios.post('http://localhost:8080/api/service-orders', formData);
+      await axios.post('http://localhost:8080/api/solicitacoes', formData);
       setMessage({ type: 'success', text: 'Solicitação enviada com sucesso!' });
       setFormData({
         empresa: '',

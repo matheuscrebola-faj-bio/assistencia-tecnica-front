@@ -10,6 +10,7 @@ import PublicForm from './pages/PublicForm';
 import Dashboard from './pages/Dashboard';
 import Clientes from './pages/Clientes';
 import Equipamentos from './pages/Equipamentos';
+import Atendimentos from './pages/Atendimentos';
 import Recebimentos from './pages/Recebimentos';
 import Faturas from './pages/Faturas';
 import Testes from './pages/Testes';
@@ -47,6 +48,14 @@ function App() {
             element={
               <PrivateRoute>
                 <Equipamentos />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/atendimentos"
+            element={
+              <PrivateRoute>
+                <Atendimentos />
               </PrivateRoute>
             }
           />

@@ -23,7 +23,7 @@ const Faturas = () => {
 
   const loadItems = async () => {
     try {
-      const response = await api.get('/quotes');
+      const response = await api.get('/faturas');
       setItems(response.data);
     } catch (error) {
       console.error('Erro ao carregar faturas:', error);
@@ -34,7 +34,7 @@ const Faturas = () => {
 
   const handleEdit = async (id) => {
     try {
-      const response = await api.get(`/quotes/${id}`);
+      const response = await api.get(`/faturas/${id}`);
       setSelectedItem(response.data);
       setFormData(response.data);
       setIsModalOpen(true);
@@ -46,7 +46,7 @@ const Faturas = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Deseja realmente excluir esta fatura?')) {
       try {
-        await api.delete(`/quotes/${id}`);
+        await api.delete(`/faturas/${id}`);
         loadItems();
       } catch (error) {
         console.error('Erro ao excluir fatura:', error);
@@ -58,9 +58,9 @@ const Faturas = () => {
     e.preventDefault();
     try {
       if (selectedItem?.id) {
-        await api.put(`/quotes/${selectedItem.id}`, formData);
+        await api.put(`/faturas/${selectedItem.id}`, formData);
       } else {
-        await api.post('/quotes', formData);
+        await api.post('/faturas', formData);
       }
       setIsModalOpen(false);
       loadItems();
