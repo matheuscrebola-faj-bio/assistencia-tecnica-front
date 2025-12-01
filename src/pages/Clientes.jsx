@@ -11,10 +11,7 @@ const Clientes = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [formData, setFormData] = useState({
     nome: '',
-    cnpj: '',
-    email: '',
-    telefone: '',
-    endereco: ''
+    documento: ''
   });
 
   useEffect(() => {
@@ -23,7 +20,7 @@ const Clientes = () => {
 
   const loadItems = async () => {
     try {
-      const response = await api.get('/clientes');
+      const response = await api.get('/customers');
       setItems(response.data);
     } catch (error) {
       console.error('Erro ao carregar clientes:', error);
@@ -34,7 +31,7 @@ const Clientes = () => {
 
   const handleEdit = async (id) => {
     try {
-      const response = await api.get(`/clientes/${id}`);
+      const response = await api.get(`/customers/${id}`);
       setSelectedItem(response.data);
       setFormData(response.data);
       setIsModalOpen(true);
@@ -46,7 +43,7 @@ const Clientes = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Deseja realmente excluir este cliente?')) {
       try {
-        await api.delete(`/clientes/${id}`);
+        await api.delete(`/customers/${id}`);
         loadItems();
       } catch (error) {
         console.error('Erro ao excluir cliente:', error);
@@ -58,9 +55,9 @@ const Clientes = () => {
     e.preventDefault();
     try {
       if (selectedItem?.id) {
-        await api.put(`/clientes/${selectedItem.id}`, formData);
+        await api.put(`/customers/${selectedItem.id}`, formData);
       } else {
-        await api.post('/clientes', formData);
+        await api.post('/customers', formData);
       }
       setIsModalOpen(false);
       loadItems();
@@ -79,7 +76,7 @@ const Clientes = () => {
 
   const openNewModal = () => {
     setSelectedItem(null);
-    setFormData({ nome: '', cnpj: '', email: '', telefone: '', endereco: '' });
+    setFormData({ nome: '', documento: '', email: '', telefone: '', endereco: '' });
     setIsModalOpen(true);
   };
 
@@ -103,9 +100,6 @@ const Clientes = () => {
                   <th>ID</th>
                   <th>Nome</th>
                   <th>CNPJ</th>
-                  <th>E-mail</th>
-                  <th>Telefone</th>
-                  <th>Ações</th>
                 </tr>
               </thead>
               <tbody>
@@ -120,9 +114,7 @@ const Clientes = () => {
                     <tr key={item.id}>
                       <td>{item.id}</td>
                       <td>{item.nome}</td>
-                      <td>{item.cnpj}</td>
-                      <td>{item.email}</td>
-                      <td>{item.telefone}</td>
+                      <td>{item.documento}</td>
                       <td>
                         <div className="action-buttons">
                           <button
