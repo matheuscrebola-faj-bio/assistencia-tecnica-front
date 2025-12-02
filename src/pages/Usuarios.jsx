@@ -23,7 +23,7 @@ const Usuarios = () => {
 
   const loadItems = async () => {
     try {
-      const response = await api.get('/usuarios');
+      const response = await api.get('/users');
       setItems(response.data);
     } catch (error) {
       console.error('Erro ao carregar usuários:', error);
@@ -34,7 +34,7 @@ const Usuarios = () => {
 
   const handleEdit = async (id) => {
     try {
-      const response = await api.get(`/usuarios/${id}`);
+      const response = await api.get(`/users/${id}`);
       setSelectedItem(response.data);
       setFormData({ ...response.data, password: '' });
       setIsModalOpen(true);
@@ -46,7 +46,7 @@ const Usuarios = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Deseja realmente excluir este usuário?')) {
       try {
-        await api.delete(`/usuarios/${id}`);
+        await api.delete(`/users/${id}`);
         loadItems();
       } catch (error) {
         console.error('Erro ao excluir usuário:', error);
@@ -58,9 +58,9 @@ const Usuarios = () => {
     e.preventDefault();
     try {
       if (selectedItem?.id) {
-        await api.put(`/usuarios/${selectedItem.id}`, formData);
+        await api.put(`/users/${selectedItem.id}`, formData);
       } else {
-        await api.post('/usuarios', formData);
+        await api.post('/users', formData);
       }
       setIsModalOpen(false);
       loadItems();
