@@ -23,7 +23,7 @@ const Equipamentos = () => {
 
   const loadItems = async () => {
     try {
-      const response = await api.get('/equipamentos');
+      const response = await api.get('/equipments');
       setItems(response.data);
     } catch (error) {
       console.error('Erro ao carregar equipamentos:', error);
@@ -34,7 +34,7 @@ const Equipamentos = () => {
 
   const handleEdit = async (id) => {
     try {
-      const response = await api.get(`/equipamentos/${id}`);
+      const response = await api.get(`/equipments/${id}`);
       setSelectedItem(response.data);
       setFormData(response.data);
       setIsModalOpen(true);
@@ -46,7 +46,7 @@ const Equipamentos = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Deseja realmente excluir este equipamento?')) {
       try {
-        await api.delete(`/equipamentos/${id}`);
+        await api.delete(`/equipments/${id}`);
         loadItems();
       } catch (error) {
         console.error('Erro ao excluir equipamento:', error);
@@ -58,9 +58,9 @@ const Equipamentos = () => {
     e.preventDefault();
     try {
       if (selectedItem?.id) {
-        await api.put(`/equipamentos/${selectedItem.id}`, formData);
+        await api.put(`/equipments/${selectedItem.id}`, formData);
       } else {
-        await api.post('/equipamentos', formData);
+        await api.post('/equipments', formData);
       }
       setIsModalOpen(false);
       loadItems();
