@@ -13,8 +13,7 @@ const Usuarios = () => {
     username: '',
     password: '',
     nome: '',
-    email: '',
-    role: 'USER'
+    email: ''
   });
 
   useEffect(() => {
@@ -104,7 +103,6 @@ const Usuarios = () => {
                   <th>Username</th>
                   <th>Nome</th>
                   <th>E-mail</th>
-                  <th>Perfil</th>
                   <th>Ações</th>
                 </tr>
               </thead>

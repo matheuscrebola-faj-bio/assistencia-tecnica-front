@@ -5,7 +5,7 @@ import './Dashboard.css';
 
 const Dashboard = () => {
   const [stats, setStats] = useState({
-    clientes: 0,
+    clientes: 219,
     equipamentos: 0,
     recebimentos: 0,
     faturas: 0
