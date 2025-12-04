@@ -259,6 +259,8 @@ const Testes = () => {
                   <th>ID</th>
                   <th>Tipo Equipamento</th>
                   <th>Data</th>
+                  <th>Status</th>
+                  <th>Cliente</th>
                   <th>Resultado</th>
                   <th>Ações</th>
                 </tr>

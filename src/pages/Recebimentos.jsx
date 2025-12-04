@@ -22,7 +22,7 @@ const Recebimentos = () => {
 
   const loadItems = async () => {
     try {
-      const response = await api.get('/recebimentos');
+      const response = await api.get('/service-orders/${id}/intake');
       setItems(response.data);
     } catch (error) {
       console.error('Erro ao carregar recebimentos:', error);
@@ -33,7 +33,7 @@ const Recebimentos = () => {
 
   const handleEdit = async (id) => {
     try {
-      const response = await api.get(`/recebimentos/${id}`);
+      const response = await api.get(`/service-orders/intake/${id}`);
       setSelectedItem(response.data);
       setFormData(response.data);
       setIsModalOpen(true);
@@ -45,7 +45,7 @@ const Recebimentos = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Deseja realmente excluir este recebimento?')) {
       try {
-        await api.delete(`/recebimentos/${id}`);
+        await api.delete(`/service-orders/intake/${id}`);
         loadItems();
       } catch (error) {
         console.error('Erro ao excluir recebimento:', error);

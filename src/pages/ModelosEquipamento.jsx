@@ -19,17 +19,7 @@ const ModelosEquipamento = () => {
 
   const productLines = [
     'MCA_PLUS_1811',
-    'MCA_PLUS_1878',
-    'BANHO_MARIA',
-    'ESTUFA',
-    'CENTRIFUGA',
-    'AUTOCLAVE',
-    'AGITADOR',
-    'BALANCA',
-    'PHMETRO',
-    'TERMOMETRO',
-    'CRONOMETRO',
-    'OUTRO'
+    'MCA_PLUS_1878'
   ];
 
   useEffect(() => {

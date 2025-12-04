@@ -134,6 +134,8 @@ const OrdensTrabalho = () => {
                   <th>Técnico</th>
                   <th>Data Início</th>
                   <th>Data Fim</th>
+                  <th>Cliente</th>
+                  <th>Aparelho</th>
                   <th>Observações</th>
                   <th>Ações</th>
                 </tr>
