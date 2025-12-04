@@ -1,0 +1,92 @@
+.status-concluido {
+  color: #059669;
+  font-weight: 600;
+}
+
+.status-andamento {
+  background-color: #dbeafe;
+  color: #1e40af;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.btn-logs {
+  background-color: #8b5cf6;
+  color: white;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.btn-logs:hover {
+  background-color: #7c3aed;
+}
+
+.btn-close-order {
+  background-color: #10b981;
+  color: white;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.btn-close-order:hover {
+  background-color: #059669;
+}
+
+.logs-section {
+  padding: 10px 0;
+}
+
+.no-logs {
+  text-align: center;
+  color: #666;
+  padding: 30px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+.logs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.log-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-red);
+}
+
+.log-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.log-id {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.log-evento {
+  font-weight: 500;
+  color: #374151;
+}
+
+.btn-delete-small {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 8px;
+}
+
+.btn-delete-small:hover {
+  background-color: #fee2e2;
+  border-radius: 4px;
+}

@@ -11,10 +11,17 @@ const Sidebar = () => {
     { path: '/clientes', label: 'Clientes', icon: '👥' },
     { path: '/equipamentos', label: 'Equipamentos', icon: '🔧' },
     { path: '/atendimentos', label: 'Atendimentos', icon: '📋' },
+    { path: '/orcamentos', label: 'Orçamentos', icon: '💵' },
+    { path: '/ordens-trabalho', label: 'Ordens de Trabalho', icon: '🛠️' },
     { path: '/recebimentos', label: 'Recebimentos', icon: '📦' },
     { path: '/faturas', label: 'Faturas', icon: '💰' },
     { path: '/testes', label: 'Testes', icon: '🧪' },
-    { path: '/remessa', label: 'Remessa', icon: '📤' },
+    { path: '/calibracoes', label: 'Calibrações', icon: '📏' },
+    { path: '/envios', label: 'Envios', icon: '🚚' },
+    { path: '/servicos', label: 'Serviços', icon: '📝' },
+    { path: '/componentes', label: 'Componentes', icon: '⚙️' },
+    { path: '/tipos-equipamento', label: 'Tipos Equip.', icon: '📂' },
+    { path: '/modelos-equipamento', label: 'Modelos Equip.', icon: '📑' },
     { path: '/usuarios', label: 'Usuários', icon: '👤' },
   ];
 

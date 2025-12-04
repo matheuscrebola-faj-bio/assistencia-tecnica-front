@@ -11,10 +11,17 @@ import Dashboard from './pages/Dashboard';
 import Clientes from './pages/Clientes';
 import Equipamentos from './pages/Equipamentos';
 import Atendimentos from './pages/Atendimentos';
+import Orcamentos from './pages/Orcamentos';
+import OrdensTrabalho from './pages/OrdensTrabalho';
 import Recebimentos from './pages/Recebimentos';
 import Faturas from './pages/Faturas';
 import Testes from './pages/Testes';
-import Remessa from './pages/Remessa';
+import Calibracoes from './pages/Calibracoes';
+import Envios from './pages/Envios';
+import Servicos from './pages/Servicos';
+import Componentes from './pages/Componentes';
+import TiposEquipamento from './pages/TiposEquipamento';
+import ModelosEquipamento from './pages/ModelosEquipamento';
 import Usuarios from './pages/Usuarios';
 
 function App() {
@@ -60,6 +67,22 @@ function App() {
             }
           />
           <Route
+            path="/orcamentos"
+            element={
+              <PrivateRoute>
+                <Orcamentos />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/ordens-trabalho"
+            element={
+              <PrivateRoute>
+                <OrdensTrabalho />
+              </PrivateRoute>
+            }
+          />
+          <Route
             path="/recebimentos"
             element={
               <PrivateRoute>
@@ -84,10 +107,50 @@ function App() {
             }
           />
           <Route
-            path="/remessa"
+            path="/calibracoes"
             element={
               <PrivateRoute>
-                <Remessa />
+                <Calibracoes />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/envios"
+            element={
+              <PrivateRoute>
+                <Envios />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/servicos"
+            element={
+              <PrivateRoute>
+                <Servicos />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/componentes"
+            element={
+              <PrivateRoute>
+                <Componentes />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/tipos-equipamento"
+            element={
+              <PrivateRoute>
+                <TiposEquipamento />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/modelos-equipamento"
+            element={
+              <PrivateRoute>
+                <ModelosEquipamento />
               </PrivateRoute>
             }
           />

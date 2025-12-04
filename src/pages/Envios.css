@@ -1,0 +1,153 @@
+.tracking-code {
+  background-color: #f3f4f6;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.mode-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.mode-envio {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.mode-retorno {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.mode-troca {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+.btn-events {
+  background-color: #14b8a6;
+  color: white;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.btn-events:hover {
+  background-color: #0d9488;
+}
+
+.events-section h3 {
+  color: var(--dark-red);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.no-events {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e5e7eb;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -26px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #e5e7eb;
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background-color: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.event-status {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.event-location {
+  color: #4b5563;
+  font-size: 13px;
+}
+
+.event-date {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* Status Colors */
+.status-postado,
+.timeline-dot.status-postado {
+  background-color: #6366f1;
+  color: #6366f1;
+}
+
+.status-transito,
+.timeline-dot.status-transito {
+  background-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.status-entrega,
+.timeline-dot.status-entrega {
+  background-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.status-entregue,
+.timeline-dot.status-entregue {
+  background-color: #10b981;
+  color: #10b981;
+}
+
+.status-devolvido,
+.timeline-dot.status-devolvido {
+  background-color: #8b5cf6;
+  color: #8b5cf6;
+}
+
+.status-extraviado,
+.timeline-dot.status-extraviado {
+  background-color: #ef4444;
+  color: #ef4444;
+}
+
+.event-status.status-postado { color: #6366f1; }
+.event-status.status-transito { color: #f59e0b; }
+.event-status.status-entrega { color: #3b82f6; }
+.event-status.status-entregue { color: #10b981; }
+.event-status.status-devolvido { color: #8b5cf6; }
+.event-status.status-extraviado { color: #ef4444; }

@@ -12,9 +12,10 @@
 }
 
 .sidebar-header {
-  padding: 30px 20px;
+  padding: 25px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
+  flex-shrink: 0;
 }
 
 .sidebar-header h2 {
@@ -29,18 +30,37 @@
 
 .sidebar-nav {
   flex: 1;
-  padding: 20px 0;
+  padding: 15px 0;
   overflow-y: auto;
+}
+
+/* Scrollbar estilizada */
+.sidebar-nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .sidebar-item {
   display: flex;
   align-items: center;
-  padding: 14px 20px;
+  padding: 12px 20px;
   color: white;
   text-decoration: none;
   transition: all 0.3s;
   gap: 12px;
+  font-size: 14px;
 }
 
 .sidebar-item:hover {
@@ -55,17 +75,36 @@
 }
 
 .sidebar-icon {
-  font-size: 20px;
+  font-size: 18px;
+  min-width: 24px;
+  text-align: center;
 }
 
 .logout-btn {
-  margin: 20px;
+  margin: 15px;
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
   padding: 12px;
   font-weight: 600;
+  flex-shrink: 0;
 }
 
 .logout-btn:hover {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+  }
+  
+  .sidebar-item {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+  
+  .sidebar-icon {
+    font-size: 16px;
+  }
 }

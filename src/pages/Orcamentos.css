@@ -1,0 +1,111 @@
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-rascunho {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.badge-enviado {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-aprovado {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.badge-rejeitado {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-expirado {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.btn-view {
+  background-color: #6366f1;
+  color: white;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.btn-view:hover {
+  background-color: #4f46e5;
+}
+
+.btn-approve {
+  background-color: #10b981;
+  color: white;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.btn-approve:hover {
+  background-color: #059669;
+}
+
+.btn-reject {
+  background-color: #f59e0b;
+  color: white;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.btn-reject:hover {
+  background-color: #d97706;
+}
+
+.quote-items-section h3 {
+  color: var(--dark-red);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.no-items {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+.items-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.items-table th,
+.items-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.items-table th {
+  background-color: #f3f4f6;
+  color: #374151;
+  font-weight: 600;
+}
+
+.btn-delete-small {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 8px;
+}
+
+.btn-delete-small:hover {
+  background-color: #fee2e2;
+  border-radius: 4px;
+}
